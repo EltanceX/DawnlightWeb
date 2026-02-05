@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Dawnlight 光影包</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="icon" href="/icon/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+<div class="topbar-left">
+  <a class="logo" href="#">
+    <img src="/icon/icon.png" alt="VoxelShader Logo">
+    <span>Dawnlight</span>
+  </a>
+</div>
+
+<div class="topbar-right">
+  <nav class="nav">
+    <a href="#intro">介绍</a>
+    <a href="#versions">版本</a>
+    <a href="#install">安装</a>
+    <a href="#team">致谢</a>
+    <button class="nav-btn" id="modsBtn">捐赠</button>
+  </nav>
+  <button class="theme-switch" id="themeToggle" aria-label="切换主题">
+    🌙
+  </button>
+</div>
+  </div>
+</header>
+
+<main>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-inner fade-in" style="color: #212e5f;">
+      <h1>Dawnlight Shaderspack</h1>
+      <p>Based On Survivalcraft 2.4 API 1.8.x</p>
+      <div class="btn-group">
+        <a class="btn primary" href="#versions">立即下载</a>
+        <a class="btn outline" href="#intro">了解更多</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section id="intro" class="section fade-in">
+    <h2>光影包介绍</h2>
+
+    <div class="content-box">
+      <p>
+        Dawnlight 专注于
+        <span class="keyword">体素渲染</span>、
+        <span class="keyword">屏幕空间反射</span>、
+        <span class="keyword">体积光照</span>，
+        旨在在保证性能的同时提供沉浸式视觉体验。
+      </p>
+
+
+
+
+
+
+          <div class="showcase">
+  <!-- 左小右大重叠 -->
+  <div class="showcase-overlap">
+    <img src="/pictures/demo-1.png" class="img-small">
+    <img src="/pictures/demo-2.png" class="img-large">
+  </div>
+
+  <!-- 单张大图 -->
+  <div class="showcase-single">
+    <img src="/pictures/demo-3.png">
+  </div>
+
+  <!-- 双图并列 -->
+  <div class="showcase-pair">
+    <img src="/pictures/demo-4.png">
+    <img src="/pictures/demo-5.png">
+  </div>
+</div>
+
+
+
+
+
+      <div class="inline-points">
+        <div class="inline-point">动态阴影</div>
+        <div class="inline-point">SSR</div>
+        <div class="inline-point">体积雾</div>
+        <div class="inline-point">Bloom</div>
+      </div>
+    </div>
+
+
+
+
+  </section>
+
+  <!-- Versions -->
+  <section id="versions" class="section fade-in">
+    <h2>历史版本下载</h2>
+
+    <div class="version-item content-box">
+      <div class="version-info">
+        <strong>v2.5</strong>
+        <span>海洋更新</span>
+      </div>
+      <a class="download-btn" href="#">即将上线(内测中)</a>
+    </div>
+
+    <div class="version-item content-box">
+      <div class="version-info">
+        <strong>v2.01</strong>
+        <span>点光源 + 体积云（推荐）(仅桌面端)</span>
+      </div>
+      <a class="download-btn" href="https://app.mediafire.com/folder/rivp9vtaty5hr">下载</a>
+    </div>
+
+    <div class="version-item content-box">
+      <div class="version-info">
+        <strong>v1.04</strong>
+        <span>SSR + 实时阴影（早期测试）(桌面端+移动端)</span>
+      </div>
+      <a class="download-btn" href="https://app.mediafire.com/folder/rivp9vtaty5hr">下载</a>
+    </div>
+  </section>
+
+  <!-- Install -->
+  <section id="install" class="section fade-in">
+    <h2>安装教程</h2>
+
+    <div class="content-box install-box">
+
+  <div class="sub-block">
+    1️⃣ 下载光影包  
+    <a href="https://app.mediafire.com/folder/rivp9vtaty5hr" target="_blank" class="ext-link">
+      MediaFire下载页 ↗
+    </a>
+  </div>
+
+  <div class="sub-block">
+    2️⃣ 对于安装包版本
+    <br>下载光影压缩包 (如[2.4][Android] Dawnlight v2.5.zip)
+    <br>找到压缩包内的APK文件 (如Survivalcraft 2.4 With Dawnlight v2.5.apk)
+    <br>
+    <br><img src="/pictures/apk.png" style="width: 30%;"/><img src="/pictures/apk-installed.png" style="width: 30%;"/>
+  </div>
+
+  <div class="sub-block">
+    2️⃣ 对于Windows版本
+    <br>下载光影压缩包 (如[2.4][Win64] Dawnlight v2.5.zip)
+    <br>
+    <br><img src="/pictures/Zip-Win.png" style="width: 60%;"/>
+    <br>
+    <br><img src="/pictures/Folder-Win.png" style="width: 60%;"/>
+    <br>解压并启动：
+    <pre><code>
+Folder/
+└─ Survivalcraft.exe
+    </code></pre>
+  </div>
+
+  <div class="sub-block">
+    2️⃣ 对于Mod版本 解压并放入目录：
+    <pre><code>
+Survivalcraft/
+└─ Mods/
+   └─ Dawnlight.scmod
+    </code></pre>
+  </div>
+
+  <div class="sub-block">
+    2️⃣ 对于Linux版本 - 解压并启动：
+    <pre><code>
+# ./Survivalcraft
+    </code></pre>
+  </div>
+
+  <div class="sub-block">
+    3️⃣ 启动游戏(确保版本匹配)
+  </div>
+
+  <details class="install-more">
+    <summary>推荐配置 & 常见问题</summary>
+
+    <p>推荐配置：</p>
+    <pre><code>
+CPU:
+AMD Ryzen 5 6600H
+Intel i5-12500H
+
+内存:
+12GB DDR4 3200
+
+显卡:
+NVIDIA 1060
+AMD RX580
+Intel Arc A580
+
+光影配置:
+ViewDistance = 368
+Shadow = ON
+VolumetricLight = ON
+WaterEffect = ON
+    </code></pre>
+
+    <p> 菜单快捷键: U (暂不支持更改)</p>
+
+    <p> 若视觉上屏幕过亮或对比度过高，可以在设置中切换Tonemapping(色调映射) </p>
+
+    <p>
+      若出现性能问题，请参考  
+      <a href="https://example.com/faq" target="_blank" class="ext-link">
+        性能优化指南 ↗
+      </a>
+    </p>
+  </details>
+
+</div>
+
+  </section>
+
+  <!-- Team -->
+  <section id="team" class="section fade-in">
+    <h2>项目贡献 & 致谢</h2>
+
+    <div class="team-wrapper">
+  <!-- 上排：2 个 -->
+  <div class="team-row row-2">
+    <div class="team-card">
+      <div class="avatar">E</div>
+      <h3>EltanceX</h3>
+      <p>Author<br>annularwind@outlook.com</p>
+    </div>
+
+    <div class="team-card">
+      <div class="avatar">B</div>
+      <h3>被遗忘的青色剑士</h3>
+      <p>算法<br>技术支持</p>
+    </div>
+  </div>
+
+  <!-- 下排：3 个 -->
+  <div class="team-row row-3">
+    <div class="team-card">
+      <div class="avatar">X</div>
+      <h3>销锋镝铸</h3>
+      <p>萤火虫<br>接口支持</p>
+    </div>
+
+    <div class="team-card">
+      <div class="avatar">T</div>
+      <h3>Tp_16b 隐形守护者 69猫</h3>
+      <h3>把红色赋予黑海</h3>
+      <p>测试<br>意见反馈</p>
+    </div>
+
+    <div class="team-card">
+      <div class="avatar">P</div>
+      <h3>玩家 - 您</h3>
+      <p>感谢各位玩家的陪伴与支持！<br></p>
+    </div>
+  </div>
+</div>
+
+  </section>
+</main>
+
+<div class="modal-overlay" id="modsModal">
+  <div class="modal">
+    <div class="modal-header">
+      <h2>捐赠</h2>
+      <button class="modal-close" id="closeModal">✕</button>
+    </div>
+
+    <div class="modal-body">
+
+      <button class="expand-btn" id="expandList2">
+        展开赞赏码 ▼
+      </button>
+
+      <div class="mods-list" id="modsList2">
+        <div class="mod-item">
+          <img src="/pictures/donate.jpg" style="width: 200px; height: 200px;"/>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="modal-body">
+
+      <button class="expand-btn" id="expandList">
+        展开赞赏列表(不定期更新) ▼
+      </button>
+
+      <div class="mods-list" id="modsList">
+        <div class="mod-item">
+          <strong>VoxelPhysics</strong>
+          <span>-</span>
+          <span>1970-01-01</span>
+        </div>
+
+        <!-- <div class="mod-item">
+          <strong>DynamicWeather</strong>
+          <span>v1.4.3</span>
+          <span>2025-12-02</span>
+        </div>
+
+        <div class="mod-item">
+          <strong>UltraTerrain</strong>
+          <span>v3.0.1</span>
+          <span>2026-01-28</span>
+        </div> -->
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<footer class="footer">
+  © 2026 Dawnlight Project
+</footer>
+
+<script>
+  const themeToggle = document.getElementById("themeToggle");
+  themeToggle.onclick = () => {
+    document.body.classList.toggle("dark-theme");
+  };
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  });
+
+  document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
+
+
+
+  const modsBtn = document.getElementById("modsBtn");
+const modal = document.getElementById("modsModal");
+const closeModal = document.getElementById("closeModal");
+const closeModal2 = document.getElementById("closeModal2");
+const expandBtn = document.getElementById("expandList");
+const expandBtn2 = document.getElementById("expandList2");
+const modsList = document.getElementById("modsList");
+const modsList2 = document.getElementById("modsList2");
+
+// 打开弹窗
+modsBtn.onclick = () => {
+  modal.style.display = "flex";
+};
+
+// 关闭弹窗
+closeModal.onclick = () => {
+  modal.style.display = "none";
+};
+
+// 点击遮罩关闭
+modal.onclick = (e) => {
+  if (e.target === modal) {
+    modal.style.display = "none";
+  }
+};
+
+// 展开列表
+expandBtn.onclick = () => {
+  const isVisible = modsList.style.display === "flex";
+
+  modsList.style.display = isVisible ? "none" : "flex";
+  expandBtn.textContent = isVisible
+    ? "展开赞赏列表 ▼"
+    : "收起赞赏列表 ▲";
+};
+
+expandBtn2.onclick = () => {
+  const isVisible = modsList2.style.display === "flex";
+
+  modsList2.style.display = isVisible ? "none" : "flex";
+  expandBtn2.textContent = isVisible
+    ? "展开赞赏码 ▼"
+    : "收起赞赏码 ▲";
+};
+
+</script>
+</body>
+</html>
