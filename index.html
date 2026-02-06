@@ -2,7 +2,8 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>Dawnlight 光影包</title>
+  <title>Dawnlight Shaderspack</title>
+  <!-- <title>Dawnlight 光影包</title> -->
   <link rel="stylesheet" href="/css/styles.css">
   <link rel="icon" href="/icon/favicon.ico" type="image/x-icon">
 </head>
@@ -114,7 +115,7 @@
     <div class="version-item content-box">
       <div class="version-info">
         <strong>v2.01</strong>
-        <span>点光源 + 体积云（推荐）(仅桌面端)</span>
+        <span>点光源 + 体积云 (仅桌面端)</span>
       </div>
       <a class="download-btn" href="https://app.mediafire.com/folder/rivp9vtaty5hr">下载</a>
     </div>
@@ -151,6 +152,9 @@
 
   <div class="sub-block">
     2️⃣ 对于Windows版本
+    <br>安装net10.0 (9.0)运行时
+    <br><img src="/pictures/Runtime-Win.png" style="width: 60%;"/>
+    <br>
     <br>下载光影压缩包 (如[2.4][Win64] Dawnlight v2.5.zip)
     <br>
     <br><img src="/pictures/Zip-Win.png" style="width: 60%;"/>
@@ -173,9 +177,38 @@ Survivalcraft/
   </div>
 
   <div class="sub-block">
-    2️⃣ 对于Linux版本 - 解压并启动：
+    2️⃣ 对于Linux版本
+    <br>安装net10.0 (net9.0)
+    <pre># Arch | Manjaro<code>
+
+# 更新包列表
+sudo apt update
+
+# 安装.NET 10.0运行时
+sudo apt install -y dotnet-runtime-10.0
+
+# 检查安装是否成功
+dotnet --list-runtimes
+
+# 或查看版本
+dotnet --info
+    </code></pre>
+    <pre># Ubuntu | Debian<code>
+      
+# 更新包数据库
+sudo pacman -Syu
+
+# 安装.NET 10.0运行时
+sudo pacman -S dotnet-runtime-10.0
+
+# 检查版本
+dotnet --version
+    </code></pre>
+    <br><img src="/pictures/Commandline-Linux.png" style="width: 50%;"/>
+    <br><img src="/pictures/Gaming-Linux.png" style="width: 60%;"/>
+    <br>解压并启动：
     <pre><code>
-# ./Survivalcraft
+user@localmachine:~# ./Survivalcraft
     </code></pre>
   </div>
 
@@ -210,6 +243,8 @@ WaterEffect = ON
     <p> 菜单快捷键: U (暂不支持更改)</p>
 
     <p> 若视觉上屏幕过亮或对比度过高，可以在设置中切换Tonemapping(色调映射) </p>
+
+    <p> [Linux] 若生成世界时崩溃，请先将视距调整至最低，等待进入游戏后再恢复视距 </p>
 
     <p>
       若出现性能问题，请参考  
