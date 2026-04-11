@@ -6,6 +6,11 @@
   <!-- <title>Dawnlight 光影包</title> -->
   <link rel="stylesheet" href="/css/styles.css">
   <link rel="icon" href="/icon/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/bash.min.js"></script>
 </head>
 
 <body>
@@ -51,53 +56,93 @@
     <h2>光影包介绍</h2>
 
     <div class="content-box">
-      <p>
-        Dawnlight 专注于
-        <span class="keyword">体素渲染</span>、
-        <span class="keyword">屏幕空间反射</span>、
-        <span class="keyword">体积光照</span>，
-        旨在在保证性能的同时提供沉浸式视觉体验。
-      </p>
+      <div class="intro-section">
+        <p class="intro-lead">
+          一款为提升 Survivalcraft 视觉体验而生的光影包，优化方块世界的细节与氛围感，兼顾视觉震撼与运行流畅度，适配各类建筑展示、生存冒险与风景观光场景，让每一次探索都充满沉浸式惊喜。
+        </p>
+      </div>
 
+      <div class="showcase">
+        <div class="showcase-overlap">
+          <img src="/pictures/demo-1.png" class="img-small" alt="光影效果展示1">
+          <img src="/pictures/demo-2.png" class="img-large" alt="光影效果展示2">
+        </div>
 
+        <div class="showcase-single">
+          <img src="/pictures/demo-3.png" alt="光影效果展示3">
+        </div>
 
+        <div class="showcase-pair">
+          <img src="/pictures/demo-4.png" alt="光影效果展示4">
+          <img src="/pictures/demo-5.png" alt="光影效果展示5">
+        </div>
+      </div>
 
+      <div class="intro-section">
+        <h3 style="color: #0078ff; margin: 1.5rem 0 1rem;">核心特性</h3>
+        
+        <div class="feature-group">
+          <div class="feature-card">
+            <div class="feature-card-title">☀️ 实时阴影与软阴影</div>
+            <div class="feature-card-desc">告别生硬色块，光影过渡自然柔和，还原真实光影投射逻辑，让每一处角落都充满层次感。</div>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-card-title">🌿 植被交互效果</div>
+            <div class="feature-card-desc">风吹草动皆有反馈，植被摇曳细腻逼真，让场景更具生机与活力。</div>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-card-title">☁️ 体积云与大气散射</div>
+            <div class="feature-card-desc">云层层次分明，随昼夜与天气动态变化，搭配四季专属大气散射效果。</div>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-card-title">🌙 夜间渲染增强</div>
+            <div class="feature-card-desc">搭配体积光与泛光效果，火把、灯笼等光源照亮路径的同时呈现自然光影衰减。</div>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-card-title">💎 PBR材质渲染</div>
+            <div class="feature-card-desc">真实物理材质渲染，还原不同方块的物理质感，金属的光泽、石头的粗糙都清晰可见。</div>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-card-title">💧 屏幕空间反射</div>
+            <div class="feature-card-desc">地面积水、雨涟漪效果逼真，水面倒映周围景致，雨天更具沉浸感。</div>
+          </div>
+        </div>
+      </div>
 
+      <div class="intro-highlight">
+        <p class="intro-highlight-text">
+          <strong>四季光影：</strong>春有柔和暖光、夏有澄澈天光、秋有暖橙光晕、冬有清冷柔光，每一季都有独特的视觉质感。
+        </p>
+      </div>
 
-          <div class="showcase">
-  <!-- 左小右大重叠 -->
-  <div class="showcase-overlap">
-    <img src="/pictures/demo-1.png" class="img-small">
-    <img src="/pictures/demo-2.png" class="img-large">
-  </div>
+      <div class="showcase">
+        <div class="showcase-triple">
+          <div class="showcase-placeholder">🖼️ 图片预留位置 1</div>
+          <div class="showcase-placeholder">🖼️ 图片预留位置 2</div>
+          <div class="showcase-placeholder">🖼️ 图片预留位置 3</div>
+        </div>
+      </div>
 
-  <!-- 单张大图 -->
-  <div class="showcase-single">
-    <img src="/pictures/demo-3.png">
-  </div>
-
-  <!-- 双图并列 -->
-  <div class="showcase-pair">
-    <img src="/pictures/demo-4.png">
-    <img src="/pictures/demo-5.png">
-  </div>
-</div>
-
-
-
-
+      <div class="intro-section" style="margin-top: 1.5rem;">
+        <p class="intro-paragraph">
+          无需复杂配置，一键启用即可享受电影级视觉体验。Dawnlight 兼顾性能与画质，适配多数设备，让你在熟悉的方块世界中，遇见不一样的视觉盛宴。
+        </p>
+      </div>
 
       <div class="inline-points">
         <div class="inline-point">动态阴影</div>
         <div class="inline-point">SSR</div>
         <div class="inline-point">体积雾</div>
         <div class="inline-point">Bloom</div>
+        <div class="inline-point">PBR材质</div>
+        <div class="inline-point">体积云</div>
       </div>
     </div>
-
-
-
-
   </section>
 
   <!-- Versions -->
@@ -137,54 +182,52 @@
     <div class="content-box install-box">
 
   <div class="sub-block">
-    1️⃣ 下载光影包  
+    <div class="sub-block-title">1️⃣ 下载光影包</div>
+    <p class="sub-block-text">前往下载页面获取最新版本：</p>
     <a href="https://app.mediafire.com/folder/rivp9vtaty5hr" target="_blank" class="ext-link">
       MediaFire下载页 ↗
     </a>
   </div>
 
   <div class="sub-block">
-    2️⃣ 对于安装包版本
-    <br>下载光影压缩包 (如[2.4][Android] Dawnlight v2.5.zip)
-    <br>找到压缩包内的APK文件 (如Survivalcraft 2.4 With Dawnlight v2.5.apk)
-    <br>
-    <br><img src="/pictures/apk.png" style="width: 30%;"/><img src="/pictures/apk-installed.png" style="width: 30%;"/>
-    <br>安装Apk
-    <br>(共存版: 与官方Api版本共存，且存档独立存储于文件夹 [通常为/storage/emulated/0/Survivalcraft2.4_Dawnlight/])
+    <div class="sub-block-title">2️⃣ Android 安装包版本</div>
+    <p class="sub-block-text">下载光影压缩包（如 <code>[2.4][Android] Dawnlight v2.5.zip</code>）</p>
+    <p class="sub-block-text">找到压缩包内的APK文件（如 <code>Survivalcraft 2.4 With Dawnlight v2.5.apk</code>）</p>
+    <div class="install-img-group">
+      <img src="/pictures/apk.png" class="install-img" alt="APK文件">
+      <img src="/pictures/apk-installed.png" class="install-img" alt="已安装APK">
+    </div>
+    <p class="sub-block-text">安装APK文件</p>
+    <p class="sub-block-hint">💡 共存版：与官方API版本共存，存档独立存储于 <code>/storage/emulated/0/Survivalcraft2.4_Dawnlight/</code></p>
   </div>
 
   <div class="sub-block">
-    2️⃣ 对于Windows版本
-    <br>安装.Net10.0 (9.0)运行时
-    <br><img src="/pictures/Runtime-Win.png" style="width: 60%;"/>
-    <br>
-    <br>下载光影压缩包 (如[2.4][Win64] Dawnlight v2.5.zip)
-    <br>
-    <br><img src="/pictures/Zip-Win.png" style="width: 60%;"/>
-    <br>
-    <br><img src="/pictures/Folder-Win.png" style="width: 60%;"/>
-    <br>解压并启动：
-    <pre><code>
-Folder/
-└─ Survivalcraft.exe
-    </code></pre>
+    <div class="sub-block-title">2️⃣ Windows 版本</div>
+    <p class="sub-block-text">首先安装 .NET 10.0（或 9.0）运行时：</p>
+    <img src="/pictures/Runtime-Win.png" class="install-img" style="max-width: 60%;" alt="Windows运行时安装">
+    <p class="sub-block-text">下载光影压缩包（如 <code>[2.4][Win64] Dawnlight v2.5.zip</code>）</p>
+    <img src="/pictures/Zip-Win.png" class="install-img" style="max-width: 60%;" alt="Windows压缩包">
+    <img src="/pictures/Folder-Win.png" class="install-img" style="max-width: 60%;" alt="Windows文件夹">
+    <p class="sub-block-text">解压并启动：</p>
+    <span class="code-label">目录结构</span>
+    <pre><code class="language-plaintext">Folder/
+└─ Survivalcraft.exe</code></pre>
   </div>
 
   <div class="sub-block">
-    2️⃣ 对于Mod版本 解压并放入目录：
-    <pre><code>
-Survivalcraft/
+    <div class="sub-block-title">2️⃣ Mod 版本</div>
+    <p class="sub-block-text">解压并放入目录：</p>
+    <span class="code-label">目录结构</span>
+    <pre><code class="language-plaintext">Survivalcraft/
 └─ Mods/
-   └─ Dawnlight.scmod
-    </code></pre>
+   └─ Dawnlight.scmod</code></pre>
   </div>
 
   <div class="sub-block">
-    2️⃣ 对于Linux版本
-    <br>安装.Net10.0 (9.0)
-    <pre># Ubuntu | Debian<code>
-
-# 更新包列表
+    <div class="sub-block-title">2️⃣ Linux 版本</div>
+    <p class="sub-block-text">首先安装 .NET 10.0（或 9.0）运行时：</p>
+    <span class="code-label">Ubuntu | Debian</span>
+    <pre><code class="language-bash"># 更新包列表
 sudo apt update
 
 # 安装.NET 10.0运行时
@@ -194,72 +237,70 @@ sudo apt install -y dotnet-runtime-10.0
 dotnet --list-runtimes
 
 # 或查看版本
-dotnet --info
-    </code></pre>
-    <pre># Arch | Manjaro<code>
-      
-# 更新包数据库
+dotnet --info</code></pre>
+    <span class="code-label">Arch | Manjaro</span>
+    <pre><code class="language-bash"># 更新包数据库
 sudo pacman -Syu
 
 # 安装.NET 10.0运行时
 sudo pacman -S dotnet-runtime-10.0
 
 # 检查版本
-dotnet --version
-    </code></pre>
-    <br><img src="/pictures/Commandline-Linux.png" style="width: 50%;"/>
-    <br><img src="/pictures/Gaming-Linux.png" style="width: 60%;"/>
-    <br>解压并启动：
-    <pre><code>
-user@localmachine:~# ./Survivalcraft
-    </code></pre>
+dotnet --version</code></pre>
+    <div class="install-img-group">
+      <img src="/pictures/Commandline-Linux.png" class="install-img" style="max-width: 50%;" alt="Linux命令行">
+      <img src="/pictures/Gaming-Linux.png" class="install-img" style="max-width: 60%;" alt="Linux游戏">
+    </div>
+    <p class="sub-block-text">解压并启动：</p>
+    <span class="code-label">命令行</span>
+    <pre><code class="language-bash">user@localmachine:~# ./Survivalcraft</code></pre>
   </div>
 
   <div class="sub-block">
-    3️⃣ 启动游戏(确保版本匹配)
+    <div class="sub-block-title">3️⃣ 启动游戏</div>
+    <p class="sub-block-text">确保版本匹配后启动游戏即可体验光影效果。</p>
   </div>
 
   <details class="install-more">
     <summary>推荐配置 & 常见问题</summary>
 
-    <p>推荐配置：</p>
-    <pre><code>
-CPU:
-AMD Ryzen 5 6600H
-Intel i5-12500H
+    <p class="sub-block-title">推荐配置</p>
+    <span class="code-label">硬件要求</span>
+    <pre><code class="language-plaintext">CPU:
+  AMD Ryzen 5 6600H
+  Intel i5-12500H
 
 内存:
-12GB DDR4 3200
+  12GB DDR4 3200
 
 显卡:
-NVIDIA 1060
-AMD RX580
-Intel Arc A580
+  NVIDIA 1060
+  AMD RX580
+  Intel Arc A580
 
 光影配置:
-ViewDistance = 368
-Shadow = ON
-VolumetricLight = ON
-WaterEffect = ON
-    </code></pre>
+  ViewDistance = 368
+  Shadow = ON
+  VolumetricLight = ON
+  WaterEffect = ON</code></pre>
 
-    <p> 菜单快捷键: U (暂不支持更改热键)</p>
+    <p class="sub-block-hint">⌨️ 菜单快捷键：<strong>U</strong>（暂不支持更改热键）</p>
 
-    <p> 手机端推荐性能优化: 更好的树叶[关闭] 软阴影[关闭] 波浪更新[禁用]</p>
+    <p class="sub-block-hint">📱 手机端推荐性能优化：更好的树叶[关闭] 软阴影[关闭] 波浪更新[禁用]</p>
 
-    <p> 若视觉上屏幕过亮或对比度过高，可以在设置中切换Tonemapping(色调映射) </p>
+    <p class="sub-block-hint">🎨 若视觉上屏幕过亮或对比度过高，可以在设置中切换 Tonemapping（色调映射）</p>
 
-    <p> [Android] 联发科设备可能由于不支持SSBO特性导致兼容性问题，若遇到请尝试更换其他平台的处理器 </p>
+    <p class="sub-block-hint">⚠️ [Android] 联发科设备可能由于不支持SSBO特性导致兼容性问题，若遇到请尝试更换其他平台的处理器</p>
 
-    <p> [Linux] 若生成世界时崩溃，请先将视距调整至最低，等待进入游戏后再恢复视距 </p>
+    <p class="sub-block-hint">⚠️ [Linux] 若生成世界时崩溃，请先将视距调整至最低，等待进入游戏后再恢复视距</p>
 
     <br>
-    <p> 关于API版本、模组安装: Dawnlight 2.5的API版本为1.8.2.3，但接口和依赖版本并非与中文官方版完全一致，且光影对渲染管线等进行了修改，可能导致模组兼容性问题。</p>
-    <p> 若您不幸遇到了此类问题，请发送邮件到annularwind@outlook.com或到QQ开发群739289392进行反馈。</p>
-    <p> 目前已知兼容的模组: 美好时代, 十亿伏特, 铃兰辅助等, 欢迎继续补充.</p>
+    <p class="sub-block-text">关于API版本、模组安装：Dawnlight 2.5的API版本为1.8.2.3，但接口和依赖版本并非与中文官方版完全一致，且光影对渲染管线等进行了修改，可能导致模组兼容性问题。</p>
+    <p class="sub-block-text">若您不幸遇到了此类问题，请发送邮件到 <code>annularwind@outlook.com</code> 或到QQ开发群 <code>739289392</code> 进行反馈。</p>
+    <p class="sub-block-text">目前已知兼容的模组：美好时代、十亿伏特、铃兰辅助等，欢迎继续补充。</p>
     <br>
 
-    <p>
+    <p class="sub-block-text">
       若出现性能问题，请参考  
       <a href="https://example.com/faq" target="_blank" class="ext-link">
         性能优化指南 ↗
@@ -388,6 +429,8 @@ WaterEffect = ON
   });
 
   document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
+
+  hljs.highlightAll();
 
 
 
