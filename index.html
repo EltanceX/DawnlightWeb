@@ -2,6 +2,7 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dawnlight Shaderspack</title>
   <!-- <title>Dawnlight 光影包</title> -->
   <link rel="stylesheet" href="/css/styles.css">
@@ -24,16 +25,21 @@
 </div>
 
 <div class="topbar-right">
-  <nav class="nav">
+  <nav class="nav" id="siteNav">
     <a href="#intro">介绍</a>
     <a href="#versions">版本</a>
     <a href="#install">安装</a>
     <a href="#team">致谢</a>
     <button class="nav-btn" id="modsBtn">捐赠</button>
   </nav>
-  <button class="theme-switch" id="themeToggle" aria-label="切换主题">
+  <div class="topbar-actions">
+    <button class="nav-toggle" id="navToggle" aria-label="打开导航菜单" aria-controls="siteNav" aria-expanded="false">
+      菜单
+    </button>
+    <button class="theme-switch" id="themeToggle" aria-label="切换主题">
     🌙
-  </button>
+    </button>
+  </div>
 </div>
   </div>
 </header>
@@ -715,7 +721,7 @@ dotnet --version</code></pre>
 
 
 <footer class="footer">
-  © 2026 Dawnlight Project | Updated 2026-04-11
+  © 2026 Dawnlight Project | Updated 2026-04-20
 </footer>
 
 <script>
@@ -723,6 +729,47 @@ dotnet --version</code></pre>
   themeToggle.onclick = () => {
     document.body.classList.toggle("dark-theme");
   };
+
+  const topbarRight = document.querySelector(".topbar-right");
+  const navToggle = document.getElementById("navToggle");
+  const navLinks = document.querySelectorAll(".nav a");
+  const isMobileNav = () => window.innerWidth <= 680;
+
+  function setMobileNavOpen(isOpen) {
+    if (!topbarRight || !navToggle) return;
+
+    topbarRight.classList.toggle("nav-open", isOpen);
+    navToggle.setAttribute("aria-expanded", String(isOpen));
+  }
+
+  if (topbarRight && navToggle) {
+    topbarRight.classList.add("nav-ready");
+
+    navToggle.addEventListener("click", event => {
+      event.stopPropagation();
+      setMobileNavOpen(!topbarRight.classList.contains("nav-open"));
+    });
+
+    navLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        if (isMobileNav()) {
+          setMobileNavOpen(false);
+        }
+      });
+    });
+
+    document.addEventListener("click", event => {
+      if (isMobileNav() && topbarRight.classList.contains("nav-open") && !topbarRight.contains(event.target)) {
+        setMobileNavOpen(false);
+      }
+    });
+
+    window.addEventListener("resize", () => {
+      if (!isMobileNav()) {
+        setMobileNavOpen(false);
+      }
+    });
+  }
 
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -789,6 +836,9 @@ const modsList2 = document.getElementById("modsList2");
 
 // 打开弹窗
 modsBtn.onclick = () => {
+  if (isMobileNav()) {
+    setMobileNavOpen(false);
+  }
   modal.style.display = "flex";
 };
 
