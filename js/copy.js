@@ -1,4 +1,39 @@
 const COPY_RESET_DELAY = 2000;
+const COPY_SUCCESS_ICON = "✓";
+const COPY_DEFAULT_ICON = "📋";
+const COPY_SUCCESS_TEXT = "已复制";
+const COPY_DEFAULT_TEXT = "复制邮箱";
+
+function fallbackCopyText(text) {
+  const textArea = document.createElement("textarea");
+  textArea.value = text;
+  textArea.setAttribute("readonly", "");
+  textArea.style.position = "fixed";
+  textArea.style.top = "0";
+  textArea.style.left = "-9999px";
+  textArea.style.opacity = "0";
+
+  document.body.appendChild(textArea);
+  textArea.focus();
+  textArea.select();
+  textArea.setSelectionRange(0, textArea.value.length);
+
+  const copied = document.execCommand("copy");
+  document.body.removeChild(textArea);
+
+  if (!copied) {
+    throw new Error("Fallback copy command failed");
+  }
+}
+
+async function copyText(text) {
+  if (navigator.clipboard?.writeText && window.isSecureContext) {
+    await navigator.clipboard.writeText(text);
+    return;
+  }
+
+  fallbackCopyText(text);
+}
 
 export function initCopyEmail() {
   const copyButton = document.getElementById("copyEmailBtn");
@@ -8,30 +43,39 @@ export function initCopyEmail() {
     return;
   }
 
+  let resetTimerId = null;
+
   copyButton.addEventListener("click", async () => {
     const email = emailElement.textContent.trim();
     const buttonText = document.getElementById("copyBtnText");
     const buttonIcon = copyButton.querySelector(".feedback-copy-icon");
 
     try {
-      await navigator.clipboard.writeText(email);
+      await copyText(email);
       copyButton.classList.add("copied");
 
       if (buttonIcon) {
-        buttonIcon.textContent = "✓";
+        buttonIcon.textContent = COPY_SUCCESS_ICON;
       }
       if (buttonText) {
-        buttonText.textContent = "已复制";
+        buttonText.textContent = COPY_SUCCESS_TEXT;
       }
 
-      window.setTimeout(() => {
+      if (resetTimerId) {
+        window.clearTimeout(resetTimerId);
+      }
+
+      resetTimerId = window.setTimeout(() => {
         copyButton.classList.remove("copied");
+
         if (buttonIcon) {
-          buttonIcon.textContent = "📋";
+          buttonIcon.textContent = COPY_DEFAULT_ICON;
         }
         if (buttonText) {
-          buttonText.textContent = "复制邮箱";
+          buttonText.textContent = COPY_DEFAULT_TEXT;
         }
+
+        resetTimerId = null;
       }, COPY_RESET_DELAY);
     } catch (error) {
       console.error("复制失败:", error);

@@ -1,0 +1,182 @@
+﻿/* ===== 椤舵爮 ===== */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+  background: linear-gradient(
+    to right,
+    rgba(255,255,255,0.92),
+    rgba(235,242,255,0.92)
+  );
+  border-bottom: 1px solid #ddd;
+}
+
+.dark-theme .topbar {
+  background: linear-gradient(
+    to right,
+    rgba(24,24,32,0.95),
+    rgba(32,32,48,0.95)
+  );
+  border-color: #333;
+}
+
+.topbar-inner {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0.6rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0b3c5d;
+  text-decoration: none;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 0 2px rgba(0,120,255,0.25);
+}
+
+.dark-theme .logo {
+  color: #66cfff;
+}
+
+.topbar-left {
+  min-width: 0;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  min-width: 0;
+}
+
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dark-theme .nav {
+  background: rgba(255,255,255,0.06);
+}
+
+/* 瀵艰埅鏁翠綋 */
+.nav {
+  display: flex;
+  gap: 0.4rem;
+  padding: 0.25rem;
+  border-radius: 999px;
+  background: rgba(0,0,0,0.04);
+}
+
+/* 瀵艰埅鎸夐挳 */
+.nav a,
+.nav-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav a {
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  color: inherit;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background .2s, color .2s;
+}
+
+.nav a:hover {
+  background: rgba(0,120,255,0.18);
+  color: #0078ff;
+}
+
+.nav-btn {
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  border: none;
+  font-size: 0.95rem;
+  background: transparent;
+  /* background: rgba(0,120,255,0.15); */
+  /* color: #0078ff; */
+  cursor: pointer;
+  transition: background .2s, transform .15s;
+}
+
+.nav-btn:hover {
+  color: #0078ff;
+  background: rgba(0,120,255,0.25);
+  transform: translateY(-1px);
+}
+
+.nav-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  height: 36px;
+  padding: 0 0.85rem;
+  border-radius: 999px;
+  border: 1px solid rgba(0,120,255,0.18);
+  background: rgba(255,255,255,0.78);
+  color: #0b3c5d;
+  font-size: 0.88rem;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background .2s, border-color .2s, transform .15s;
+}
+
+.nav-toggle:hover {
+  background: rgba(0,120,255,0.1);
+  border-color: rgba(0,120,255,0.3);
+  transform: translateY(-1px);
+}
+
+.dark-theme .nav-toggle {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(100,180,255,0.22);
+  color: #66cfff;
+}
+
+.topbar-right.nav-open .nav-toggle {
+  background: linear-gradient(135deg, #0078ff, #00a8ff);
+  border-color: transparent;
+  color: #fff;
+}
+
+/* ===== 涓婚鍒囨崲鎸夐挳 ===== */
+.theme-switch {
+  margin-left: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0,120,255,0.15);
+  color: #0078ff;
+  cursor: pointer;
+  transition: transform .15s, background .2s;
+}
+
+.theme-switch:hover {
+  transform: rotate(10deg);
+  background: rgba(0,120,255,0.25);
+}
+

@@ -1,0 +1,57 @@
+﻿/* ===== 鍩虹 ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: #f6f8fb;
+  color: #111;
+  overflow-x: hidden;
+  transition: background .3s, color .3s;
+}
+
+.dark-theme {
+  background: #181820;
+  color: #e6e6eb;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1, h2 {
+  margin-bottom: 0.8rem;
+}
+
+.section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 2.2rem 1.2rem;
+}
+
+section[id] {
+  scroll-margin-top: 90px;
+}
+
+.section-subtitle {
+  color: #0078ff;
+  margin: 1.5rem 0 1rem;
+}
+
+.intro-section-spaced {
+  margin-top: 1.5rem;
+}
+

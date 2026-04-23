@@ -1,0 +1,257 @@
+﻿/* ===== 鐗堟湰涓嬭浇鍖哄煙 ===== */
+.version-section {
+  background: rgba(255,255,255,0.85);
+  border: 1px solid #e0e6ed;
+  border-radius: 14px;
+  padding: 0;
+  margin: 1.2rem 0;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  overflow: hidden;
+}
+
+.dark-theme .version-section {
+  background: rgba(32,32,44,0.85);
+  border-color: #2f3440;
+}
+
+.version-tabs {
+  display: flex;
+  gap: 0.5rem;
+  padding: 1rem 1.2rem;
+  background: rgba(0,120,255,0.04);
+  border-bottom: 1px solid rgba(0,120,255,0.1);
+}
+
+.dark-theme .version-tabs {
+  background: rgba(0,120,255,0.06);
+  border-bottom-color: rgba(100,180,255,0.15);
+}
+
+.version-tab {
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  border: 1px solid rgba(0,120,255,0.2);
+  background: transparent;
+  color: #0078ff;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all .25s ease;
+}
+
+.version-tab:hover {
+  background: rgba(0,120,255,0.1);
+  border-color: rgba(0,120,255,0.4);
+}
+
+.version-tab.active {
+  background: linear-gradient(135deg, #0078ff, #00c6ff);
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 4px 15px rgba(0,120,255,0.35);
+}
+
+.dark-theme .version-tab {
+  color: #66cfff;
+  border-color: rgba(100,180,255,0.25);
+}
+
+.dark-theme .version-tab:hover {
+  background: rgba(0,120,255,0.15);
+  border-color: rgba(100,180,255,0.4);
+}
+
+.dark-theme .version-tab.active {
+  background: linear-gradient(135deg, #0078ff, #00c6ff);
+  color: #fff;
+}
+
+.version-tab-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  background: rgba(255,255,255,0.2);
+  margin-left: 0.4rem;
+  vertical-align: middle;
+}
+
+.version-tab.active .version-tab-badge {
+  background: rgba(255,255,255,0.25);
+}
+
+.version-list-container {
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 0.8rem 1.2rem;
+}
+
+.version-list-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.version-list-container::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.version-list-container::-webkit-scrollbar-thumb {
+  background: rgba(0,120,255,0.3);
+  border-radius: 3px;
+}
+
+.version-list-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(0,120,255,0.5);
+}
+
+.dark-theme .version-list-container::-webkit-scrollbar-track {
+  background: rgba(255,255,255,0.04);
+}
+
+.dark-theme .version-list-container::-webkit-scrollbar-thumb {
+  background: rgba(100,180,255,0.3);
+}
+
+.dark-theme .version-list-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(100,180,255,0.5);
+}
+
+.version-list {
+  display: none;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.version-list.active {
+  display: flex;
+}
+
+.version-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  background: rgba(0,120,255,0.03);
+  border: 1px solid rgba(0,120,255,0.08);
+  border-radius: 10px;
+  transition: all .25s ease;
+}
+
+.version-item:hover {
+  background: rgba(0,120,255,0.08);
+  border-color: rgba(0,120,255,0.2);
+  transform: translateX(4px);
+}
+
+.version-item-disabled,
+.version-item-disabled:hover {
+  cursor: not-allowed;
+  transform: none;
+}
+
+.dark-theme .version-item {
+  background: rgba(0,120,255,0.05);
+  border-color: rgba(100,180,255,0.1);
+}
+
+.dark-theme .version-item:hover {
+  background: rgba(0,120,255,0.1);
+  border-color: rgba(100,180,255,0.25);
+}
+
+.version-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.version-info strong {
+  font-size: 1.05rem;
+  color: #0078ff;
+}
+
+.dark-theme .version-info strong {
+  color: #66cfff;
+}
+
+.version-info span {
+  font-size: 0.88rem;
+  color: #666;
+}
+
+.dark-theme .version-info span {
+  color: #999;
+}
+
+.version-tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
+
+.version-tag.latest {
+  background: linear-gradient(135deg, #00c853, #69f0ae);
+  color: #fff;
+}
+
+.version-tag.stable {
+  background: linear-gradient(135deg, #2196f3, #64b5f6);
+  color: #fff;
+}
+
+.version-tag.beta {
+  background: linear-gradient(135deg, #ff9800, #ffb74d);
+  color: #fff;
+}
+
+.version-tag.legacy {
+  background: rgba(0,0,0,0.1);
+  color: #666;
+}
+
+.dark-theme .version-tag.legacy {
+  background: rgba(255,255,255,0.1);
+  color: #999;
+}
+
+.download-btn {
+  background: linear-gradient(135deg, #0078ff, #00a8ff);
+  color: #fff;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all .25s ease;
+  white-space: nowrap;
+}
+
+.download-btn:hover {
+  background: linear-gradient(135deg, #005fcc, #0088cc);
+  box-shadow: 0 6px 20px rgba(0,120,255,0.4);
+  transform: translateY(-2px);
+}
+
+.download-btn.is-disabled,
+.download-btn.is-disabled:hover {
+  pointer-events: none;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+  opacity: 0.75;
+}
+
+.version-empty {
+  text-align: center;
+  padding: 2rem;
+  color: #999;
+  font-size: 0.95rem;
+}
+
+.dark-theme .version-empty {
+  color: #777;
+}
+
