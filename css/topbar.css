@@ -4,21 +4,8 @@
   top: 0;
   z-index: 100;
   backdrop-filter: blur(10px);
-  background: linear-gradient(
-    to right,
-    rgba(255,255,255,0.92),
-    rgba(235,242,255,0.92)
-  );
-  border-bottom: 1px solid #ddd;
-}
-
-.dark-theme .topbar {
-  background: linear-gradient(
-    to right,
-    rgba(24,24,32,0.95),
-    rgba(32,32,48,0.95)
-  );
-  border-color: #333;
+  background: var(--topbar-bg);
+  border-bottom: 1px solid var(--topbar-border);
 }
 
 .topbar-inner {
@@ -33,7 +20,7 @@
 .logo {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #0b3c5d;
+  color: var(--accent-brand);
   text-decoration: none;
 }
 
@@ -49,10 +36,6 @@
   border-radius: 50%;
   object-fit: cover;
   box-shadow: 0 0 0 2px rgba(0,120,255,0.25);
-}
-
-.dark-theme .logo {
-  color: #66cfff;
 }
 
 .topbar-left {
@@ -72,17 +55,13 @@
   gap: 0.5rem;
 }
 
-.dark-theme .nav {
-  background: rgba(255,255,255,0.06);
-}
-
 /* 瀵艰埅鏁翠綋 */
 .nav {
   display: flex;
   gap: 0.4rem;
   padding: 0.25rem;
   border-radius: 999px;
-  background: rgba(0,0,0,0.04);
+  background: var(--nav-shell-bg);
 }
 
 /* 瀵艰埅鎸夐挳 */
@@ -104,8 +83,8 @@
 }
 
 .nav a:hover {
-  background: rgba(0,120,255,0.18);
-  color: #0078ff;
+  background: var(--nav-link-hover-bg);
+  color: var(--accent-text);
 }
 
 .nav-btn {
@@ -121,8 +100,8 @@
 }
 
 .nav-btn:hover {
-  color: #0078ff;
-  background: rgba(0,120,255,0.25);
+  color: var(--accent-text);
+  background: var(--nav-btn-hover-bg);
   transform: translateY(-1px);
 }
 
@@ -134,9 +113,9 @@
   height: 36px;
   padding: 0 0.85rem;
   border-radius: 999px;
-  border: 1px solid rgba(0,120,255,0.18);
-  background: rgba(255,255,255,0.78);
-  color: #0b3c5d;
+  border: 1px solid var(--nav-toggle-border);
+  background: var(--nav-toggle-bg);
+  color: var(--nav-toggle-text);
   font-size: 0.88rem;
   font-weight: 600;
   white-space: nowrap;
@@ -145,21 +124,15 @@
 }
 
 .nav-toggle:hover {
-  background: rgba(0,120,255,0.1);
-  border-color: rgba(0,120,255,0.3);
+  background: var(--accent-surface-6);
+  border-color: var(--nav-toggle-border-hover);
   transform: translateY(-1px);
 }
 
-.dark-theme .nav-toggle {
-  background: rgba(255,255,255,0.08);
-  border-color: rgba(100,180,255,0.22);
-  color: #66cfff;
-}
-
 .topbar-right.nav-open .nav-toggle {
-  background: linear-gradient(135deg, #0078ff, #00a8ff);
+  background: linear-gradient(135deg, var(--accent), #00a8ff);
   border-color: transparent;
-  color: #fff;
+  color: var(--text-inverse);
 }
 
 /* ===== 涓婚鍒囨崲鎸夐挳 ===== */
@@ -169,14 +142,14 @@
   height: 36px;
   border-radius: 50%;
   border: none;
-  background: rgba(0,120,255,0.15);
-  color: #0078ff;
+  background: var(--theme-switch-bg);
+  color: var(--accent-text);
   cursor: pointer;
   transition: transform .15s, background .2s;
 }
 
 .theme-switch:hover {
   transform: rotate(10deg);
-  background: rgba(0,120,255,0.25);
+  background: var(--theme-switch-bg-hover);
 }
 

@@ -12,15 +12,10 @@ html {
 body {
   margin: 0;
   font-family: "Segoe UI", system-ui, sans-serif;
-  background: #f6f8fb;
-  color: #111;
+  background: var(--page-bg);
+  color: var(--page-text);
   overflow-x: hidden;
   transition: background .3s, color .3s;
-}
-
-.dark-theme {
-  background: #181820;
-  color: #e6e6eb;
 }
 
 body.modal-open {
@@ -47,7 +42,7 @@ section[id] {
 }
 
 .section-subtitle {
-  color: #0078ff;
+  color: var(--accent-text);
   margin: 1.5rem 0 1rem;
 }
 
