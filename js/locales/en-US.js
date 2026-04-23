@@ -41,7 +41,7 @@ export const enUS = {
     community: {
       qq: "QQ Group",
     },
-    footer: "© 2026 Dawnlight Project | Updated 2026-04-20",
+    footer: "© 2026 Dawnlight Project | Updated 2026-04-23",
   },
   content: {
     introHtml: `

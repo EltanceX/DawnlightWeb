@@ -41,7 +41,7 @@ export const zhCN = {
     community: {
       qq: "QQ群",
     },
-    footer: "© 2026 Dawnlight Project | Updated 2026-04-20",
+    footer: "© 2026 Dawnlight Project | Updated 2026-04-23",
   },
   content: {
     introHtml: `
