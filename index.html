@@ -30,13 +30,13 @@
     <a href="#versions">版本</a>
     <a href="#install">安装</a>
     <a href="#team">致谢</a>
-    <button class="nav-btn" id="modsBtn">捐赠</button>
+    <button class="nav-btn" id="modsBtn" type="button" data-modal-open="modsModal">捐赠</button>
   </nav>
   <div class="topbar-actions">
     <button class="nav-toggle" id="navToggle" aria-label="打开导航菜单" aria-controls="siteNav" aria-expanded="false">
       菜单
     </button>
-    <button class="theme-switch" id="themeToggle" aria-label="切换主题">
+    <button class="theme-switch" id="themeToggle" type="button" aria-label="切换主题" aria-pressed="false">
     🌙
     </button>
   </div>
@@ -47,7 +47,7 @@
 <main>
   <!-- Hero -->
   <section class="hero">
-    <div class="hero-inner fade-in" style="color: #212e5f;">
+    <div class="hero-inner hero-inner-accent fade-in">
       <h1>Dawnlight Shaderspack</h1>
       <p>Based On Survivalcraft 2.4 API 1.8 (1.9 Coming Soon)</p>
       <div class="btn-group">
@@ -85,7 +85,7 @@
       </div>
 
       <div class="intro-section">
-        <h3 style="color: #0078ff; margin: 1.5rem 0 1rem;">核心特性</h3>
+        <h3 class="section-subtitle">核心特性</h3>
         
         <div class="feature-group">
           <div class="feature-card">
@@ -134,7 +134,7 @@
         </div>
       </div>
 
-      <div class="intro-section" style="margin-top: 1.5rem;">
+      <div class="intro-section intro-section-spaced">
         <p class="intro-paragraph">
           无需复杂配置，一键启用即可享受电影级视觉体验。Dawnlight 兼顾性能与画质，适配多数设备，让你在熟悉的方块世界中，遇见不一样的视觉盛宴。
         </p>
@@ -154,283 +154,12 @@
   <!-- Versions -->
   <section id="versions" class="section fade-in">
     <h2>版本下载</h2>
-
-    <div class="version-section">
-      <div class="version-tabs">
-        <button class="version-tab active" data-tab="beta">
-          测试版更新
-          <span class="version-tab-badge">1</span>
-        </button>
-        <button class="version-tab" data-tab="stable">
-          稳定版本
-          <span class="version-tab-badge">3</span>
-        </button>
-        <button class="version-tab" data-tab="legacy">
-          历史版本
-          <span class="version-tab-badge">4</span>
-        </button>
-      </div>
-
-      <div class="version-list-container">
-        <div class="version-list active" id="version-beta">
-          <div class="version-item" style="cursor: not-allowed;">
-            <div class="version-info">
-              <strong>v3.0 <span class="version-tag beta">Beta</span></strong>
-              <span>大气与PBR - 即将推出</span>
-            </div>
-            <a class="download-btn" href="https://app.mediafire.com/folder/rivp9vtaty5hr"
-            style="pointer-events: none; cursor: not-allowed;">下载</a>
-          </div>
-          <!-- <div class="version-item">
-            <div class="version-info">
-              <strong>v2.57 <span class="version-tag beta">Beta</span></strong>
-              <span>体积云重构版 (Win+安卓) - 性能优化测试</span>
-            </div>
-            <a class="download-btn" href="https://app.mediafire.com/folder/rivp9vtaty5hr">下载</a>
-          </div> -->
-        </div>
-
-        <div class="version-list" id="version-stable">
-          <div class="version-item">
-            <div class="version-info">
-              <strong>v2.56 <span class="version-tag latest">最新</span></strong>
-              <span>海洋更新与优化 (Win+Android+Linux) - 推荐使用</span>
-            </div>
-            <a class="download-btn" href="https://app.mediafire.com/folder/rivp9vtaty5hr">下载</a>
-          </div>
-          <div class="version-item">
-            <div class="version-info">
-              <strong>v2.50 <span class="version-tag stable">稳定</span></strong>
-              <span>海洋更新 (Win+Android+Linux)</span>
-            </div>
-            <a class="download-btn" href="https://app.mediafire.com/folder/rivp9vtaty5hr">下载</a>
-          </div>
-          <div class="version-item">
-            <div class="version-info">
-              <strong>v2.01 <span class="version-tag stable">稳定</span></strong>
-              <span>点光源 + 体积云 (Windows Only)</span>
-            </div>
-            <a class="download-btn" href="https://app.mediafire.com/folder/rivp9vtaty5hr">下载</a>
-          </div>
-        </div>
-
-        <div class="version-list" id="version-legacy">
-          <div class="version-item">
-            <div class="version-info">
-              <strong>v1.04 <span class="version-tag legacy">历史</span></strong>
-              <span>SSR + 实时阴影 (Scmod)</span>
-            </div>
-            <a class="download-btn" href="https://app.mediafire.com/folder/rivp9vtaty5hr">下载</a>
-          </div>
-          <div class="version-item">
-            <div class="version-info">
-              <strong>v1.02 <span class="version-tag legacy">历史</span></strong>
-              <span>基础光影版 (Scmod)</span>
-            </div>
-            <a class="download-btn" href="https://app.mediafire.com/folder/rivp9vtaty5hr">下载</a>
-          </div>
-          <div class="version-item">
-            <div class="version-info">
-              <strong>v1.00 <span class="version-tag legacy">历史</span></strong>
-              <span>首个公测版本 (Windows Only)</span>
-            </div>
-            <a class="download-btn" href="https://app.mediafire.com/folder/rivp9vtaty5hr">下载</a>
-          </div>
-          <div class="version-item">
-            <div class="version-info">
-              <strong>v0.95 <span class="version-tag legacy">历史</span></strong>
-              <span>内测版本 - SSR</span>
-            </div>
-            <a class="download-btn" href="https://app.mediafire.com/folder/rivp9vtaty5hr">下载</a>
-          </div>
-          <!-- <div class="version-item">
-            <div class="version-info">
-              <strong>v0.80 <span class="version-tag legacy">历史</span></strong>
-              <span>早期开发版本</span>
-            </div>
-            <a class="download-btn" href="https://app.mediafire.com/folder/rivp9vtaty5hr">下载</a>
-          </div> -->
-        </div>
-      </div>
-    </div>
+    <div id="versionsRoot"></div>
   </section>
 
   <!-- Changelog -->
   <section id="changelog" class="section fade-in">
-    <div class="changelog-section">
-      <div class="changelog-header">
-        <h3 class="changelog-title">📜 更新日志</h3>
-      </div>
-      <div class="changelog-container">
-        
-        <div class="changelog-version-group">
-          <div class="changelog-version-header">
-            <span class="changelog-version-tag minor">v3.0 [Coming Soon]</span>
-            <span class="changelog-version-date">Expected 2026-05</span>
-          </div>
-          <ul class="changelog-list">
-            <li class="changelog-item">
-              <span class="changelog-item-icon added">✨</span>
-              <span class="changelog-item-text">添加适配四季的大气散射</span>
-            </li>
-            <li class="changelog-item">
-              <span class="changelog-item-icon added">✨</span>
-              <span class="changelog-item-text">全新版本的体积云</span>
-            </li>
-            <li class="changelog-item">
-              <span class="changelog-item-icon added">✨</span>
-              <span class="changelog-item-text">支持部分方块的PBR纹理</span>
-            </li>
-            <li class="changelog-item">
-              <span class="changelog-item-icon added">✨</span>
-              <span class="changelog-item-text">海洋及地面积水支持反射天空</span>
-            </li>
-            <li class="changelog-item">
-              <span class="changelog-item-icon improved">⚡</span>
-              <span class="changelog-item-text">SSR反射法线优化，阴影/体积云性能优化</span>
-            </li>
-            <li class="changelog-item">
-              <span class="changelog-item-icon changed">🔄</span>
-              <span class="changelog-item-text">重构阴影系统，减少偏移降低浮空感</span>
-            </li>
-            <li class="changelog-item">
-              <span class="changelog-item-icon fixed">🐛</span>
-              <span class="changelog-item-text">修复楼梯渲染亮度异常问题</span>
-            </li>
-            <li class="changelog-item">
-              <span class="changelog-item-icon fixed">🐛</span>
-              <span class="changelog-item-text">修复藤蔓亮度与部分面不渲染的问题</span>
-            </li>
-          </ul>
-        </div>
-
-
-        <div class="changelog-version-group">
-          <div class="changelog-version-header">
-            <span class="changelog-version-tag major">v2.5x</span>
-            <span class="changelog-version-date">2026-02</span>
-          </div>
-          <ul class="changelog-list">
-            <li class="changelog-item">
-              <span class="changelog-item-icon added">✨</span>
-              <span class="changelog-item-text">新增海洋渲染效果，支持动态波浪和水面反射</span>
-            </li>
-            <li class="changelog-item">
-              <span class="changelog-item-icon added">✨</span>
-              <span class="changelog-item-text">添加 Linux 平台原生支持</span>
-            </li>
-            <li class="changelog-item">
-              <span class="changelog-item-icon improved">⚡</span>
-              <span class="changelog-item-text">优化体积云渲染性能，帧率提升约 15%</span>
-            </li>
-            <li class="changelog-item">
-              <span class="changelog-item-icon changed">🔄</span>
-              <span class="changelog-item-text">重构 PBR 材质系统，提升金属和玻璃质感</span>
-            </li>
-
-          </ul>
-        </div>
-
-        <div class="changelog-divider"></div>
-
-        <div class="changelog-version-group">
-          <div class="changelog-version-header">
-            <span class="changelog-version-tag major">v2.0x</span>
-            <span class="changelog-version-date">2025-11</span>
-          </div>
-          <ul class="changelog-list">
-            <li class="changelog-item">
-              <span class="changelog-item-icon added">✨</span>
-              <span class="changelog-item-text">新增点光源系统，支持火把、灯笼等动态光源</span>
-            </li>
-            <li class="changelog-item">
-              <span class="changelog-item-icon added">✨</span>
-              <span class="changelog-item-text">添加体积云效果，支持昼夜动态变化</span>
-            </li>
-            <li class="changelog-item">
-              <span class="changelog-item-icon added">✨</span>
-              <span class="changelog-item-text">新增四季光影预设，每季独特视觉风格</span>
-            </li>
-            <li class="changelog-item">
-              <span class="changelog-item-icon improved">⚡</span>
-              <span class="changelog-item-text">优化阴影渲染算法，减少锯齿感</span>
-            </li>
-            <li class="changelog-item">
-              <span class="changelog-item-icon changed">🔄</span>
-              <span class="changelog-item-text">改进 Bloom 效果，光晕更加自然柔和</span>
-            </li>
-            <li class="changelog-item">
-              <span class="changelog-item-icon fixed">🐛</span>
-              <span class="changelog-item-text">修复雨天水面反射丢失的问题</span>
-            </li>
-          </ul>
-        </div>
-
-        <div class="changelog-divider"></div>
-
-        <div class="changelog-version-group">
-          <div class="changelog-version-header">
-            <span class="changelog-version-tag major">v1.0x</span>
-            <span class="changelog-version-date">2025-08</span>
-          </div>
-          <ul class="changelog-list">
-            <li class="changelog-item">
-              <span class="changelog-item-icon added">✨</span>
-              <span class="changelog-item-text">首次发布，支持 SSR 屏幕空间反射</span>
-            </li>
-            <li class="changelog-item">
-              <span class="changelog-item-icon added">✨</span>
-              <span class="changelog-item-text">实现实时动态阴影系统</span>
-            </li>
-            <li class="changelog-item">
-              <span class="changelog-item-icon added">✨</span>
-              <span class="changelog-item-text">添加体积雾效果，支持深度感知</span>
-            </li>
-            <li class="changelog-item">
-              <span class="changelog-item-icon added">✨</span>
-              <span class="changelog-item-text">支持 Android 移动端平台</span>
-            </li>
-            <li class="changelog-item">
-              <span class="changelog-item-icon improved">⚡</span>
-              <span class="changelog-item-text">基础光影配置界面，支持快捷键 U 调用</span>
-            </li>
-          </ul>
-        </div>
-
-        <div class="changelog-divider"></div>
-
-        <div class="changelog-version-group">
-          <div class="changelog-version-header">
-            <span class="changelog-version-tag patch">v0.9x</span>
-            <span class="changelog-version-date">2025-05</span>
-          </div>
-          <ul class="changelog-list">
-            <li class="changelog-item">
-              <span class="changelog-item-icon added">✨</span>
-              <span class="changelog-item-text">内测版本发布，基础光影框架</span>
-            </li>
-            <li class="changelog-item">
-              <span class="changelog-item-icon added">✨</span>
-              <span class="changelog-item-text">SSR 反射效果预览</span>
-            </li>
-            <li class="changelog-item">
-              <span class="changelog-item-icon improved">⚡</span>
-              <span class="changelog-item-text">基础阴影渲染实现</span>
-            </li>
-            <li class="changelog-item">
-              <span class="changelog-item-icon fixed">🐛</span>
-              <span class="changelog-item-text">修复早期版本内存泄漏问题</span>
-            </li>
-            <li class="changelog-item">
-              <span class="changelog-item-icon removed">🗑️</span>
-              <span class="changelog-item-text">移除旧版固定管线代码</span>
-            </li>
-          </ul>
-        </div>
-
-        <div class="changelog-divider"></div>
-      </div>
-    </div>
+    <div id="changelogRoot"></div>
   </section>
 
   <!-- Community -->
@@ -476,7 +205,7 @@
             <span class="feedback-email" id="feedbackEmail">annularwind@outlook.com</span>
           </div>
         </div>
-        <button class="feedback-copy-btn" id="copyEmailBtn" onclick="copyEmail()">
+        <button class="feedback-copy-btn" id="copyEmailBtn" type="button">
           <span class="feedback-copy-icon">📋</span>
           <span id="copyBtnText">复制邮箱</span>
         </button>
@@ -513,10 +242,10 @@
   <div class="sub-block">
     <div class="sub-block-title">2️⃣ Windows 版本</div>
     <p class="sub-block-text">首先安装 .NET 10.0（或 9.0）运行时：</p>
-    <img src="/pictures/Runtime-Win.png" class="install-img" style="max-width: 60%;" alt="Windows运行时安装">
+    <img src="/pictures/Runtime-Win.png" class="install-img install-img-medium" alt="Windows运行时安装" loading="lazy" decoding="async">
     <p class="sub-block-text">下载光影压缩包（如 <code>[2.4][Win64] Dawnlight v2.5.zip</code>）</p>
-    <img src="/pictures/Zip-Win.png" class="install-img" style="max-width: 60%;" alt="Windows压缩包">
-    <img src="/pictures/Folder-Win.png" class="install-img" style="max-width: 60%;" alt="Windows文件夹">
+    <img src="/pictures/Zip-Win.png" class="install-img install-img-medium" alt="Windows压缩包" loading="lazy" decoding="async">
+    <img src="/pictures/Folder-Win.png" class="install-img install-img-medium" alt="Windows文件夹" loading="lazy" decoding="async">
     <p class="sub-block-text">解压并启动：</p>
     <span class="code-label">目录结构</span>
     <pre><code class="language-plaintext">Folder/
@@ -557,8 +286,8 @@ sudo pacman -S dotnet-runtime-10.0
 # 检查版本
 dotnet --version</code></pre>
     <div class="install-img-group">
-      <img src="/pictures/Commandline-Linux.png" class="install-img" style="max-width: 50%;" alt="Linux命令行">
-      <img src="/pictures/Gaming-Linux.png" class="install-img" style="max-width: 60%;" alt="Linux游戏">
+      <img src="/pictures/Commandline-Linux.png" class="install-img install-img-narrow" alt="Linux命令行" loading="lazy" decoding="async">
+      <img src="/pictures/Gaming-Linux.png" class="install-img install-img-medium" alt="Linux游戏" loading="lazy" decoding="async">
     </div>
     <p class="sub-block-text">解压并启动：</p>
     <span class="code-label">命令行</span>
@@ -625,97 +354,18 @@ dotnet --version</code></pre>
   <!-- Team -->
   <section id="team" class="section fade-in">
     <h2>项目贡献 & 致谢</h2>
-
-    <div class="team-wrapper">
-  <!-- 上排：2 个 -->
-  <div class="team-row row-2">
-    <div class="team-card">
-      <div class="avatar">E</div>
-      <h3>EltanceX</h3>
-      <p>Author<br>annularwind@outlook.com</p>
-    </div>
-
-    <div class="team-card">
-      <div class="avatar">B</div>
-      <h3>被遗忘的青色剑士</h3>
-      <p>算法<br>技术支持</p>
-    </div>
-  </div>
-
-  <!-- 下排：3 个 -->
-  <div class="team-row row-3">
-    <div class="team-card">
-      <div class="avatar">X</div>
-      <h3>销锋镝铸</h3>
-      <p>萤火虫<br>接口支持</p>
-    </div>
-
-    <div class="team-card">
-      <div class="avatar">T</div>
-      <h3>Tp_16b 隐形守护者 69猫</h3>
-      <h3>把红色赋予黑海</h3>
-      <p>测试<br>意见反馈</p>
-    </div>
-
-    <div class="team-card">
-      <div class="avatar">P</div>
-      <h3>玩家 - 您</h3>
-      <p>感谢各位玩家的陪伴与支持！<br></p>
-    </div>
-  </div>
-</div>
+    <div id="teamRoot"></div>
 
   </section>
 </main>
 
-<div class="modal-overlay" id="modsModal">
-  <div class="modal">
+<div class="modal-overlay" id="modsModal" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modsModalTitle">
     <div class="modal-header">
-      <h2>捐赠</h2>
-      <button class="modal-close" id="closeModal">✕</button>
+      <h2 id="modsModalTitle">捐赠</h2>
+      <button class="modal-close" type="button" data-modal-close>✕</button>
     </div>
-
-    <div class="modal-body">
-
-      <button class="expand-btn" id="expandList2">
-        展开赞赏码 ▼
-      </button>
-
-      <div class="mods-list" id="modsList2">
-        <div class="mod-item">
-          <img src="/pictures/donate.jpg" style="width: 200px; height: 200px;"/>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="modal-body">
-
-      <button class="expand-btn" id="expandList">
-        展开赞赏列表(不定期更新) ▼
-      </button>
-
-      <div class="mods-list" id="modsList">
-        <div class="mod-item">
-          <strong>VoxelPhysics</strong>
-          <span>-</span>
-          <span>1970-01-01</span>
-        </div>
-
-        <!-- <div class="mod-item">
-          <strong>DynamicWeather</strong>
-          <span>v1.4.3</span>
-          <span>2025-12-02</span>
-        </div>
-
-        <div class="mod-item">
-          <strong>UltraTerrain</strong>
-          <span>v3.0.1</span>
-          <span>2026-01-28</span>
-        </div> -->
-      </div>
-
-    </div>
+    <div id="donationSectionsRoot"></div>
   </div>
 </div>
 
@@ -724,155 +374,6 @@ dotnet --version</code></pre>
   © 2026 Dawnlight Project | Updated 2026-04-20
 </footer>
 
-<script>
-  const themeToggle = document.getElementById("themeToggle");
-  themeToggle.onclick = () => {
-    document.body.classList.toggle("dark-theme");
-  };
-
-  const topbarRight = document.querySelector(".topbar-right");
-  const navToggle = document.getElementById("navToggle");
-  const navLinks = document.querySelectorAll(".nav a");
-  const isMobileNav = () => window.innerWidth <= 680;
-
-  function setMobileNavOpen(isOpen) {
-    if (!topbarRight || !navToggle) return;
-
-    topbarRight.classList.toggle("nav-open", isOpen);
-    navToggle.setAttribute("aria-expanded", String(isOpen));
-  }
-
-  if (topbarRight && navToggle) {
-    topbarRight.classList.add("nav-ready");
-
-    navToggle.addEventListener("click", event => {
-      event.stopPropagation();
-      setMobileNavOpen(!topbarRight.classList.contains("nav-open"));
-    });
-
-    navLinks.forEach(link => {
-      link.addEventListener("click", () => {
-        if (isMobileNav()) {
-          setMobileNavOpen(false);
-        }
-      });
-    });
-
-    document.addEventListener("click", event => {
-      if (isMobileNav() && topbarRight.classList.contains("nav-open") && !topbarRight.contains(event.target)) {
-        setMobileNavOpen(false);
-      }
-    });
-
-    window.addEventListener("resize", () => {
-      if (!isMobileNav()) {
-        setMobileNavOpen(false);
-      }
-    });
-  }
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-      }
-    });
-  });
-
-  document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
-
-  hljs.highlightAll();
-
-  const versionTabs = document.querySelectorAll(".version-tab");
-  const versionLists = document.querySelectorAll(".version-list");
-
-  versionTabs.forEach(tab => {
-    tab.addEventListener("click", () => {
-      versionTabs.forEach(t => t.classList.remove("active"));
-      tab.classList.add("active");
-
-      const targetId = "version-" + tab.dataset.tab;
-      versionLists.forEach(list => {
-        list.classList.remove("active");
-        if (list.id === targetId) {
-          list.classList.add("active");
-        }
-      });
-    });
-  });
-
-  function copyEmail() {
-    const email = document.getElementById("feedbackEmail").textContent;
-    navigator.clipboard.writeText(email).then(() => {
-      const btn = document.getElementById("copyEmailBtn");
-      const btnText = document.getElementById("copyBtnText");
-      const btnIcon = btn.querySelector(".feedback-copy-icon");
-      
-      btn.classList.add("copied");
-      btnIcon.textContent = "✓";
-      btnText.textContent = "已复制";
-      
-      setTimeout(() => {
-        btn.classList.remove("copied");
-        btnIcon.textContent = "📋";
-        btnText.textContent = "复制邮箱";
-      }, 2000);
-    }).catch(err => {
-      console.error("复制失败:", err);
-    });
-  }
-  window.copyEmail = copyEmail;
-
-
-
-  const modsBtn = document.getElementById("modsBtn");
-const modal = document.getElementById("modsModal");
-const closeModal = document.getElementById("closeModal");
-const closeModal2 = document.getElementById("closeModal2");
-const expandBtn = document.getElementById("expandList");
-const expandBtn2 = document.getElementById("expandList2");
-const modsList = document.getElementById("modsList");
-const modsList2 = document.getElementById("modsList2");
-
-// 打开弹窗
-modsBtn.onclick = () => {
-  if (isMobileNav()) {
-    setMobileNavOpen(false);
-  }
-  modal.style.display = "flex";
-};
-
-// 关闭弹窗
-closeModal.onclick = () => {
-  modal.style.display = "none";
-};
-
-// 点击遮罩关闭
-modal.onclick = (e) => {
-  if (e.target === modal) {
-    modal.style.display = "none";
-  }
-};
-
-// 展开列表
-expandBtn.onclick = () => {
-  const isVisible = modsList.style.display === "flex";
-
-  modsList.style.display = isVisible ? "none" : "flex";
-  expandBtn.textContent = isVisible
-    ? "展开赞赏列表 ▼"
-    : "收起赞赏列表 ▲";
-};
-
-expandBtn2.onclick = () => {
-  const isVisible = modsList2.style.display === "flex";
-
-  modsList2.style.display = isVisible ? "none" : "flex";
-  expandBtn2.textContent = isVisible
-    ? "展开赞赏码 ▼"
-    : "收起赞赏码 ▲";
-};
-
-</script>
+<script type="module" src="/js/main.js"></script>
 </body>
 </html>

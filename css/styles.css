@@ -23,6 +23,10 @@ body {
   color: #e6e6eb;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -40,6 +44,15 @@ h1, h2 {
 
 section[id] {
   scroll-margin-top: 90px;
+}
+
+.section-subtitle {
+  color: #0078ff;
+  margin: 1.5rem 0 1rem;
+}
+
+.intro-section-spaced {
+  margin-top: 1.5rem;
 }
 
 /* ===== 顶栏 ===== */
@@ -270,6 +283,10 @@ section[id] {
 
 .dark-theme .hero-inner {
   color: #fff;
+}
+
+.hero-inner-accent {
+  color: #212e5f;
 }
 
 
@@ -725,6 +742,12 @@ section[id] {
   transform: translateX(4px);
 }
 
+.version-item-disabled,
+.version-item-disabled:hover {
+  cursor: not-allowed;
+  transform: none;
+}
+
 .dark-theme .version-item {
   background: rgba(0,120,255,0.05);
   border-color: rgba(100,180,255,0.1);
@@ -809,6 +832,15 @@ section[id] {
   background: linear-gradient(135deg, #005fcc, #0088cc);
   box-shadow: 0 6px 20px rgba(0,120,255,0.4);
   transform: translateY(-2px);
+}
+
+.download-btn.is-disabled,
+.download-btn.is-disabled:hover {
+  pointer-events: none;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+  opacity: 0.75;
 }
 
 .version-empty {
@@ -1279,6 +1311,14 @@ section[id] {
   box-shadow: 0 10px 30px rgba(0,120,255,0.25);
 }
 
+.install-img-medium {
+  max-width: 60%;
+}
+
+.install-img-narrow {
+  max-width: 50%;
+}
+
 .install-img-group {
   display: flex;
   flex-wrap: wrap;
@@ -1570,6 +1610,10 @@ pre code {
   z-index: 999;
 }
 
+.modal-overlay.is-open {
+  display: flex;
+}
+
 /* ===== 弹窗主体 ===== */
 .modal {
   width: 90%;
@@ -1625,6 +1669,10 @@ pre code {
   gap: 0.8rem;
 }
 
+.mods-list.is-open {
+  display: flex;
+}
+
 /* 模组条目 */
 .mod-item {
   display: grid;
@@ -1634,6 +1682,17 @@ pre code {
   border-radius: 10px;
   background: rgba(0,120,255,0.08);
   font-size: 0.9rem;
+}
+
+.mod-item-image {
+  justify-items: center;
+  grid-template-columns: 1fr;
+}
+
+.donate-qr {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
 }
 
 @media (max-width: 900px) {
@@ -1897,7 +1956,8 @@ pre code {
   }
 
   .install-img-group .install-img,
-  #install .install-img[style] {
+  #install .install-img-medium,
+  #install .install-img-narrow {
     min-width: 0;
     max-width: 100% !important;
   }
