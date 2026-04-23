@@ -1,8 +1,8 @@
+import { getLocaleData } from "./i18n.js";
+
 const COPY_RESET_DELAY = 2000;
 const COPY_SUCCESS_ICON = "✓";
 const COPY_DEFAULT_ICON = "📋";
-const COPY_SUCCESS_TEXT = "已复制";
-const COPY_DEFAULT_TEXT = "复制邮箱";
 
 function fallbackCopyText(text) {
   const textArea = document.createElement("textarea");
@@ -57,8 +57,9 @@ export function initCopyEmail() {
       if (buttonIcon) {
         buttonIcon.textContent = COPY_SUCCESS_ICON;
       }
+
       if (buttonText) {
-        buttonText.textContent = COPY_SUCCESS_TEXT;
+        buttonText.textContent = getLocaleData().messages.controls.copied;
       }
 
       if (resetTimerId) {
@@ -71,14 +72,15 @@ export function initCopyEmail() {
         if (buttonIcon) {
           buttonIcon.textContent = COPY_DEFAULT_ICON;
         }
+
         if (buttonText) {
-          buttonText.textContent = COPY_DEFAULT_TEXT;
+          buttonText.textContent = getLocaleData().messages.controls.copyEmail;
         }
 
         resetTimerId = null;
       }, COPY_RESET_DELAY);
     } catch (error) {
-      console.error("复制失败:", error);
+      console.error("Copy email failed:", error);
     }
   });
 }

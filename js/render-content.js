@@ -1,6 +1,19 @@
-import { changelogGroups, donationSections, teamRows, versionGroups } from "./site-data.js";
+import { getLocaleData } from "./i18n.js";
+
+function renderIntro() {
+  return getLocaleData().content.introHtml;
+}
+
+function renderInstall() {
+  return getLocaleData().content.installHtml;
+}
 
 function renderVersionGroups() {
+  const {
+    content: { versionGroups },
+    messages,
+  } = getLocaleData();
+
   const tabs = versionGroups
     .map((group, index) => {
       const activeClass = index === 0 ? " active" : "";
@@ -37,7 +50,7 @@ function renderVersionGroups() {
                 <strong>${item.version} <span class="version-tag ${item.tagType}">${item.tagLabel}</span></strong>
                 <span>${item.description}</span>
               </div>
-              <a class="download-btn${buttonDisabledClass}" href="${item.href}" ${linkAttrs}>下载</a>
+              <a class="download-btn${buttonDisabledClass}" href="${item.href}" ${linkAttrs}>${messages.controls.download}</a>
             </div>
           `;
         })
@@ -60,7 +73,7 @@ function renderVersionGroups() {
 
   return `
     <div class="version-section" data-tabs>
-      <div class="version-tabs" role="tablist" aria-label="版本分类">
+      <div class="version-tabs" role="tablist" aria-label="${messages.sections.versions}">
         ${tabs}
       </div>
       <div class="version-list-container">
@@ -71,6 +84,11 @@ function renderVersionGroups() {
 }
 
 function renderChangelog() {
+  const {
+    content: { changelogGroups },
+    messages,
+  } = getLocaleData();
+
   const groups = changelogGroups
     .map((group, index) => {
       const items = group.items
@@ -104,7 +122,7 @@ function renderChangelog() {
   return `
     <div class="changelog-section">
       <div class="changelog-header">
-        <h3 class="changelog-title">📜 更新日志</h3>
+        <h3 class="changelog-title">✦ ${messages.sections.changelog}</h3>
       </div>
       <div class="changelog-container">
         ${groups}
@@ -114,6 +132,10 @@ function renderChangelog() {
 }
 
 function renderTeam() {
+  const {
+    content: { teamRows },
+  } = getLocaleData();
+
   const rows = teamRows
     .map(row => {
       const rowClass = row.length === 2 ? "row-2" : "row-3";
@@ -140,6 +162,10 @@ function renderTeam() {
 }
 
 function renderDonationSections() {
+  const {
+    content: { donationSections },
+  } = getLocaleData();
+
   return donationSections
     .map(section => {
       const items = section.items
@@ -186,10 +212,20 @@ function renderDonationSections() {
 }
 
 export function renderPageSections() {
+  const introRoot = document.getElementById("introRoot");
+  const installRoot = document.getElementById("installRoot");
   const versionsRoot = document.getElementById("versionsRoot");
   const changelogRoot = document.getElementById("changelogRoot");
   const teamRoot = document.getElementById("teamRoot");
   const donationRoot = document.getElementById("donationSectionsRoot");
+
+  if (introRoot) {
+    introRoot.innerHTML = renderIntro();
+  }
+
+  if (installRoot) {
+    installRoot.innerHTML = renderInstall();
+  }
 
   if (versionsRoot) {
     versionsRoot.innerHTML = renderVersionGroups();
