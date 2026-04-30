@@ -24,7 +24,7 @@ export const enUS = {
       copied: "Copied",
     },
     hero: {
-      subtitle: "Based On Survivalcraft 2.4 API 1.8 (1.9 Coming Soon)",
+      subtitle: "Based On Survivalcraft 2.4 API 1.9",
       primaryCta: "Download Now",
       secondaryCta: "Learn More",
     },
@@ -41,7 +41,7 @@ export const enUS = {
     community: {
       qq: "QQ Group",
     },
-    footer: "© 2026 Dawnlight Project | Updated 2026-04-23",
+    footer: "© 2026 Dawnlight Project | Updated 2026-04-30",
   },
   content: {
     introHtml: `
@@ -112,9 +112,9 @@ export const enUS = {
 
         <div class="showcase">
           <div class="showcase-triple">
-            <div class="showcase-placeholder">🖼️ Image 1</div>
-            <div class="showcase-placeholder">🖼️ Image 2</div>
-            <div class="showcase-placeholder">🖼️ Image 3</div>
+            <img src="/pictures/Dawnlight 3.0 A.png" alt="Dawnlight 3.0 A" loading="lazy" decoding="async">
+            <img src="/pictures/Dawnlight 3.0 B.png" alt="Dawnlight 3.0 B" loading="lazy" decoding="async">
+            <img src="/pictures/Dawnlight 3.0 C.png" alt="Dawnlight 3.0 C" loading="lazy" decoding="async">
           </div>
         </div>
 
@@ -266,9 +266,8 @@ Shader Settings:
             version: "v3.0",
             tagLabel: "Beta",
             tagType: "beta",
-            description: "Atmosphere & PBR - Coming Soon",
+            description: "Atmosphere & PBR",
             href: DOWNLOAD_URL,
-            disabled: true,
           },
         ],
       },
@@ -277,9 +276,16 @@ Shader Settings:
         label: "Stable Releases",
         items: [
           {
-            version: "v2.56",
+            version: "v3.0",
             tagLabel: "Latest",
             tagType: "latest",
+            description: "Atmosphere & PBR",
+            href: DOWNLOAD_URL,
+          },
+          {
+            version: "v2.56",
+            tagLabel: "Stable",
+            tagType: "stable",
             description: "Ocean update and optimization (Win+Android+Linux) - Recommended",
             href: DOWNLOAD_URL,
           },
@@ -336,9 +342,9 @@ Shader Settings:
     ],
     changelogGroups: [
       {
-        version: "v3.0 [Coming Soon]",
+        version: "v3.0",
         type: "minor",
-        date: "Expected 2026-05",
+        date: "",
         items: [
           { icon: "✨", type: "added", text: "Added seasonal atmospheric scattering support" },
           { icon: "✨", type: "added", text: "A brand-new volumetric cloud implementation" },

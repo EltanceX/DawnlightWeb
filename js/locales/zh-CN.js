@@ -24,7 +24,7 @@ export const zhCN = {
       copied: "已复制",
     },
     hero: {
-      subtitle: "Based On Survivalcraft 2.4 API 1.8 (1.9 Coming Soon)",
+      subtitle: "Based On Survivalcraft 2.4 API 1.9",
       primaryCta: "立即下载",
       secondaryCta: "了解更多",
     },
@@ -41,7 +41,7 @@ export const zhCN = {
     community: {
       qq: "QQ群",
     },
-    footer: "© 2026 Dawnlight Project | Updated 2026-04-23",
+    footer: "© 2026 Dawnlight Project | Updated 2026-04-30",
   },
   content: {
     introHtml: `
@@ -112,9 +112,9 @@ export const zhCN = {
 
         <div class="showcase">
           <div class="showcase-triple">
-            <div class="showcase-placeholder">🖼️ 图片 1</div>
-            <div class="showcase-placeholder">🖼️ 图片 2</div>
-            <div class="showcase-placeholder">🖼️ 图片 3</div>
+            <img src="/pictures/Dawnlight 3.0 A.png" alt="Dawnlight 3.0 A" loading="lazy" decoding="async">
+            <img src="/pictures/Dawnlight 3.0 B.png" alt="Dawnlight 3.0 B" loading="lazy" decoding="async">
+            <img src="/pictures/Dawnlight 3.0 C.png" alt="Dawnlight 3.0 C" loading="lazy" decoding="async">
           </div>
         </div>
 
@@ -266,9 +266,8 @@ dotnet --version</code></pre>
             version: "v3.0",
             tagLabel: "Beta",
             tagType: "beta",
-            description: "大气与 PBR - 即将推出",
+            description: "大气与 PBR",
             href: DOWNLOAD_URL,
-            disabled: true,
           },
         ],
       },
@@ -277,9 +276,16 @@ dotnet --version</code></pre>
         label: "稳定版本",
         items: [
           {
-            version: "v2.56",
+            version: "v3.0",
             tagLabel: "最新",
             tagType: "latest",
+            description: "大气与 PBR",
+            href: DOWNLOAD_URL,
+          },
+          {
+            version: "v2.56",
+            tagLabel: "稳定",
+            tagType: "stable",
             description: "海洋更新与优化 (Win+Android+Linux) - 推荐使用",
             href: DOWNLOAD_URL,
           },
@@ -336,9 +342,9 @@ dotnet --version</code></pre>
     ],
     changelogGroups: [
       {
-        version: "v3.0 [Coming Soon]",
+        version: "v3.0",
         type: "minor",
-        date: "Expected 2026-05",
+        date: "",
         items: [
           { icon: "✨", type: "added", text: "添加适配四季的大气散射" },
           { icon: "✨", type: "added", text: "全新版本的体积云" },
