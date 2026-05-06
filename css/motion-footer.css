@@ -17,3 +17,30 @@
   font-size: 0.9rem;
   opacity: 0.8;
 }
+
+.footer-line + .footer-line {
+  margin-top: 0.38rem;
+}
+
+.footer-status-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: inherit;
+  text-decoration: none;
+  transition: color .2s ease, opacity .2s ease;
+}
+
+.footer-status-link:hover {
+  color: var(--accent-text);
+  opacity: 1;
+}
+
+.footer-status-dot {
+  width: 0.58rem;
+  height: 0.58rem;
+  border-radius: 50%;
+  background: #2ecc71;
+  box-shadow: 0 0 0 0.22rem rgba(46, 204, 113, 0.16);
+  flex-shrink: 0;
+}
